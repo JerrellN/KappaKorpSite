@@ -1,22 +1,113 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+  }
+
+  .socialMediaIcon{
+    height: 1.5rem;
   }
   
-  .navBar{
+  .nostyle{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+
+  .nostyle:visited{
+    color: black;
+  }
+
+  .AoTPic{
+    width: 13.25rem;
+    margin: auto;
+  }
+
+  .soloPageBody{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .jerrellPic{
+    width: 100%;
+    margin: auto;
+  }
+
+  .soloText{
+    background-color: #a3ff8a;
+    border-radius: .5rem;
+    padding: 1rem;
+  }
+
+  .soloPicGreybox{
+    height: 20rem;
+    background-color: grey;
+    width: 75%;
+    margin: 1rem;
+  }
+
+  .navBar{
+    /*display: flex;*/
     width: 98.5vw;
     margin: 0 auto;
     justify-content: space-between;
     background-color: #a3ff8a;
     border-radius: 8pt;
     align-items: center;
+    /*height: 3rem;*/
+    filter: drop-shadow(.25rem .5rem .5rem #47b5b2);
+  }
+
+  
+
+  .navbar-toggle{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: .2s linear;
+  }
+
+  .menu-icon:hover{
+    opacity: .9;
+    transform: scale(1.1);
+  }
+
+  .ownerCard{
+    background-color: #a3ff8a;
+    border-radius: .5rem;
+    padding: .5rem;
+  }
+
+  
+
+  .ownerCard:hover{
+    cursor: pointer;
+  }
+
+  .ownerGreybox{
+    background-color: gray;
+    height: 20rem;
+    border-radius: .5rem;
+  }
+
+  .logo{
+    background: url('../images/KappaKorpLogo.png');
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+    margin: 5px;
   }
   
   .siteTitle{
     font-size: calc(16px + 1vw);
     padding: 8px;
     text-decoration: none;
+    font-family: 'Architects Daughter', cursive;
+    
   }
   
   .branding{
@@ -28,8 +119,36 @@
     text-decoration: none;
   }
 
+  .navOptions li{
+    text-align: center;
+    margin: 1rem;
+    overflow: hidden;
+  }
+
+  .navOptions{
+    display: none;
+    transition: .6s;
+  }
+
+  
+
+  .active{
+    display: block;
+  }
+
+  .navbarToggle{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    color: black;
+    font-size: 3rem;
+  }
+
   .navBarContent{
     color: #141414;
+    
+    font-family: 'Balsamiq Sans', cursive;
   }
 
   .navBarContent:active{
@@ -39,6 +158,19 @@
   .navBarContent:visited{
     color: #141414;
   }
+
+  #firstText{
+    height: 2rem;
+  }
+
+  #secondText{
+    height: 2rem;
+  }
+
+  #thirdText{
+    height: 2rem;
+  }
+
   
   .inquiryMain{
     display: grid;
@@ -51,27 +183,47 @@
   .inquiryHeader{
     grid-column-start: 2;
     grid-row-start: 2;
+    font-family: 'Architects Daughter', cursive;
   }
 
   .inquiryForm{
     grid-row-start: 3;
     grid-column-start: 2;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    filter: drop-shadow(.25rem .5rem .5rem #47b5b2);
+    font-family: 'Balsamiq Sans', cursive;
   }
 
-  #subject{
-    height: 1rem;
+  .AboutUsMain{
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    grid-template-columns: 1rem 1fr 1rem;
   }
 
-  #fullname{
-    height: 1rem;
+  .flexCentered{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
-
-  #email{
-    height: 1rem;
+  
+  .inputBar{
+    border-radius: 1rem;
+    font-family: 'Balsamiq Sans', cursive;
+    height: 2rem;
+    padding: 1rem;
   }
 
   #summary{
-    height: 5rem;
+    height: 7rem;
+    padding: .5rem;
+  }
+
+  .submitInquiry{
+    width: 4rem;
   }
 
   .inquiryExtras{
@@ -81,12 +233,30 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1.5rem 1fr 1fr;
     grid-gap: 1rem;
+    
+    font-family: 'Balsamiq Sans', cursive;
   }
 
   .inquiryDescription{
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 3;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    filter: drop-shadow(.25rem .5rem .5rem #47b5b2);
+    font-family: 'Balsamiq Sans', cursive;
+  }
+
+  .pieceDescription{
+    background-color: white;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: .5rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    filter: drop-shadow(.25rem .5rem .5rem #47b5b2);
   }
 
   .greybox2{
@@ -94,32 +264,38 @@
     height: 15rem;
   }
 
-  #extra1{
-    grid-row-start: 2;
-    grid-column-start: 1;
+  .socials{
+    margin: 1rem;
   }
 
-  #extra2{
-    grid-row-start: 3;
-    grid-column-start: 1;
+  .background{
+    background-image: linear-gradient(260deg, #5c9e9d 0%,  #96d8f2 100%);
   }
 
-  #extra3{
-    grid-row-start: 3;
-    grid-column-start: 2;
+  .main{
+    
+    border-radius: 1rem;
   }
 
-  #extra4{
-    grid-row-start: 2;
-    grid-column-start: 2;
+  .imgText{
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8rem;
+    filter: drop-shadow(.25rem .5rem .5rem #47b5b2);
   }
 
-
-  @media only screen and (min-width: 480px){
+  @media only screen and (min-width: 367px){
     .navOptions{
       list-style-type: none;
     }
     
+    .navbarToggle{
+      display: none;
+    }
+
     .main{
         display: grid;
         padding: 1rem;
@@ -132,12 +308,21 @@
     .pageTitle{
         grid-column-start: 2;
         grid-row-start: 1;
-        
+        grid-gap: 1rem;
     }
+
+    .ownersLayout{
+      display: grid;
+      grid-row-start: 2;
+      grid-column-start: 2;
+      
+    }
+
+    
   
     .greybox{
-      width: 360px;
-      height: 160px;
+      width: 25rem;
+      height: auto;
       background-color: grey;
     }
   
@@ -182,9 +367,94 @@
       align-items: center;
       justify-content: space-around;
     }
+
+    .inquiryMain{
+      grid-template-columns: 1fr;
+      grid-template-rows: 3rem 1fr 1fr;
+    }
+
+    .inquiryHeader{
+      grid-row-start: 1;
+      grid-column-start: 1;
+    }
+    .inquiryForm{
+      grid-row-start: 2;
+      grid-column-start: 1;
+      height: 30rem;
+    }
+
+    .inquiryExtras{
+      grid-column-start: 1;
+      grid-row-start: 3;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .inquiryDescription{
+      grid-row-start: 1;
+      grid-column-start: 1;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #extra1{
+      grid-row-start: 2;
+      grid-column-start: 1;
+    }
+
+    #extra2{
+      grid-row-start: 3;
+      grid-column-start: 1;
+    }
+
+    #extra3{
+      grid-row-start: 4;
+      grid-column-start: 1;
+    }
+
+    #extra4{
+      grid-row-start: 5;
+      grid-column-start: 1;
+    }
+
+    .ownersLayout{
+      grid-template-columns: .5rem 1fr .5rem;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: .5rem;
+    }
+
+    .jerrell{
+      grid-row-start: 1;
+      grid-column-start: 2;
+    }
+
+    .mikal{
+      grid-row-start: 2;
+      grid-column-start: 2;
+    }
+
+    .dezo{
+      grid-row-start: 3;
+      grid-column-start: 2;
+    }
+
+    .tino{
+      grid-row-start: 4;
+      grid-column-start: 2;
+    }
+
+    .ant{
+      grid-row-start: 5;
+      grid-column-start: 2;
+    }
   }
   
   @media only screen and (min-width: 767px){
+
+    
+
       .navBarContent:hover{
       text-decoration: underline;
       color: #7cc5cc;
@@ -192,7 +462,6 @@
   
     .navOptions{
       list-style-type: none;
-      display: flex;
     }
   
     .navElement{
@@ -221,9 +490,13 @@
     }
   
     .greybox{
-      width: 360px;
-      height: 240px;
+      width: 35.5rem;
+      height: auto;
       background-color: grey;
+    }
+
+    .imgText{
+      width: 25rem;
     }
   
     #firstImage{
@@ -267,10 +540,123 @@
       align-items: center;
       justify-content: space-around;
     }
+
+    .inquiryMain{
+      grid-template-columns: 1fr;
+      grid-template-rows: 3rem 1fr 1fr;
+    }
+
+    .inquiryHeader{
+      grid-row-start: 1;
+      grid-column-start: 1;
+    }
+    .inquiryForm{
+      grid-row-start: 2;
+      grid-column-start: 1;
+      height: 30rem;
+    }
+
+    .inquiryExtras{
+      grid-column-start: 1;
+      grid-row-start: 3;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .inquiryDescription{
+      grid-row-start: 1;
+      grid-column-start: 1;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #extra1{
+      grid-row-start: 2;
+      grid-column-start: 1;
+    }
+
+    #extra2{
+      grid-row-start: 3;
+      grid-column-start: 1;
+    }
+
+    #extra3{
+      grid-row-start: 4;
+      grid-column-start: 1;
+    }
+
+    #extra4{
+      grid-row-start: 5;
+      grid-column-start: 1;
+    }
+
+    .ownersLayout{
+      grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
+      grid-template-rows: 1rem 1fr 1fr 1rem;
+    }
+
+    .jerrell{
+      grid-row-start: 2;
+      grid-column-start: 2;
+    }
+
+    .mikal{
+      grid-row-start: 2;
+      grid-column-start: 3;
+    }
+
+    .dezo{
+      grid-row-start: 2;
+      grid-column-start: 4;
+    }
+
+    .tino{
+      grid-row-start: 3;
+      grid-column-start: 2;
+    }
+
+    .ant{
+      grid-row-start: 3;
+      grid-column-start: 3;
+    }
+    
   }
   
-  @media only screen and (min-width: 1240px)
+  @media only screen and (min-width: 1200px)
   {
+    .ownersLayout{
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 1rem;
+    }
+
+    .jerrell{
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+
+    .mikal{
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+
+    .dezo{
+      grid-column-start: 3;
+      grid-row-start: 1;
+    }
+
+    .tino{
+      grid-column-start: 4;
+      grid-row-start: 1;
+    }
+
+    .ant{
+      grid-column-start: 5;
+      grid-row-start: 1;
+    }
+
       .navBarContent:hover{
       text-decoration: underline;
       color: #7cc5cc;
@@ -278,7 +664,6 @@
   
     .navOptions{
       list-style-type: none;
-      display: flex;
     }
   
     .navElement{
@@ -297,7 +682,7 @@
       padding: 1rem;
       grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
       grid-template-rows: 1rem 1fr 1fr 1rem;
-      grid-gap: 1rem;
+      grid-gap: 2rem;
       margin: 1rem;
     }
   
@@ -307,11 +692,17 @@
     }
   
     .greybox{
-      width: 360px;
-      height: 240px;
+      width: 24rem;
+      height: 16rem;
       background-color: grey;
     }
-  
+    
+    .imgText{
+      height: 3rem;
+      
+
+    }
+
     #firstImage{
       grid-column-start: 2;
       grid-row-start: 2;
@@ -353,4 +744,76 @@
       align-items: center;
       justify-content: space-around;
     }
+
+
+    .inquiryMain{
+      display: grid;
+      grid-template-columns: 1rem 1fr 1fr 1rem;
+      grid-template-rows: 1rem 2rem 1fr 1rem;
+      grid-gap: .5rem;
+      margin: .5rem;
+    }
+    .inquiryHeader{
+      grid-column-start: 2;
+      grid-row-start: 2;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .inquiryForm{
+      grid-row-start: 3;
+      grid-column-start: 2;
+      background-color: white;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      filter: drop-shadow(.25rem .5rem .5rem #47b5b2);
+      font-family: 'Balsamiq Sans', cursive;
+    }
+
+    .inquiryExtras{
+      grid-row-start: 3;
+      grid-column-start: 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1.5rem 1fr 1fr;
+      grid-gap: 1rem;
+      font-family: 'Balsamiq Sans', cursive;
+    }
+
+    .inquiryDescription{
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      height: 2rem;
+      background-color: white;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-around;
+      filter: drop-shadow(.25rem .5rem .5rem #47b5b2);
+      font-family: 'Balsamiq Sans', cursive;
+    }
+    
+
+    #extra1{
+      grid-row-start: 2;
+      grid-column-start: 1;
+    }
+  
+    #extra2{
+      grid-row-start: 3;
+      grid-column-start: 1;
+    }
+  
+    #extra3{
+      grid-row-start: 3;
+      grid-column-start: 2;
+    }
+  
+    #extra4{
+      grid-row-start: 2;
+      grid-column-start: 2;
+    }
+
+    
   }
